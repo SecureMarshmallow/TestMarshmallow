@@ -16,6 +16,8 @@
 		0ECDEAD12A093F35009EEC20 /* TestMarshmallowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDEAD02A093F35009EEC20 /* TestMarshmallowTests.swift */; };
 		0ECDEADB2A093F35009EEC20 /* TestMarshmallowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDEADA2A093F35009EEC20 /* TestMarshmallowUITests.swift */; };
 		0ECDEADD2A093F35009EEC20 /* TestMarshmallowUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDEADC2A093F35009EEC20 /* TestMarshmallowUITestsLaunchTests.swift */; };
+		0ECDEAEB2A09D2B5009EEC20 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0ECDEAEA2A09D2B5009EEC20 /* SnapKit */; };
+		0ECDEAEE2A09D2C3009EEC20 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 0ECDEAED2A09D2C3009EEC20 /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ECDEAEB2A09D2B5009EEC20 /* SnapKit in Frameworks */,
+				0ECDEAEE2A09D2C3009EEC20 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +147,10 @@
 			dependencies = (
 			);
 			name = TestMarshmallow;
+			packageProductDependencies = (
+				0ECDEAEA2A09D2B5009EEC20 /* SnapKit */,
+				0ECDEAED2A09D2C3009EEC20 /* Then */,
+			);
 			productName = TestMarshmallow;
 			productReference = 0ECDEAB32A093F34009EEC20 /* TestMarshmallow.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,10 @@
 				Base,
 			);
 			mainGroup = 0ECDEAAA2A093F34009EEC20;
+			packageReferences = (
+				0ECDEAE92A09D2B5009EEC20 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				0ECDEAEC2A09D2C3009EEC20 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = 0ECDEAB42A093F34009EEC20 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -594,6 +606,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0ECDEAE92A09D2B5009EEC20 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		0ECDEAEC2A09D2C3009EEC20 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0ECDEAEA2A09D2B5009EEC20 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0ECDEAE92A09D2B5009EEC20 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		0ECDEAED2A09D2C3009EEC20 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0ECDEAEC2A09D2C3009EEC20 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		0ECDEABF2A093F34009EEC20 /* TestMarshmallow.xcdatamodeld */ = {
