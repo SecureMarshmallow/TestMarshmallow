@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		0EE4E6ED2A09DA40000DDD9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4E6EC2A09DA40000DDD9F /* AppDelegate.swift */; };
 		0EE4E6EF2A09DA40000DDD9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4E6EE2A09DA40000DDD9F /* SceneDelegate.swift */; };
-		0EE4E6F12A09DA40000DDD9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4E6F02A09DA40000DDD9F /* ViewController.swift */; };
+		0EE4E6F12A09DA40000DDD9F /* WiFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4E6F02A09DA40000DDD9F /* WiFiViewController.swift */; };
 		0EE4E6F72A09DA40000DDD9F /* TestMarshmallow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4E6F52A09DA40000DDD9F /* TestMarshmallow.xcdatamodeld */; };
 		0EE4E6F92A09DA41000DDD9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EE4E6F82A09DA41000DDD9F /* Assets.xcassets */; };
 		0EE4E6FC2A09DA41000DDD9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EE4E6FA2A09DA41000DDD9F /* LaunchScreen.storyboard */; };
 		0EE4E7072A09DA41000DDD9F /* TestMarshmallowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4E7062A09DA41000DDD9F /* TestMarshmallowTests.swift */; };
 		0EE4E7112A09DA41000DDD9F /* TestMarshmallowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4E7102A09DA41000DDD9F /* TestMarshmallowUITests.swift */; };
 		0EE4E7132A09DA41000DDD9F /* TestMarshmallowUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4E7122A09DA41000DDD9F /* TestMarshmallowUITestsLaunchTests.swift */; };
+		0EE4E7222A0A1ED6000DDD9F /* BatteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4E7212A0A1ED6000DDD9F /* BatteryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 		0EE4E6E92A09DA40000DDD9F /* TestMarshmallow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMarshmallow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE4E6EC2A09DA40000DDD9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EE4E6EE2A09DA40000DDD9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0EE4E6F02A09DA40000DDD9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0EE4E6F02A09DA40000DDD9F /* WiFiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiViewController.swift; sourceTree = "<group>"; };
 		0EE4E6F62A09DA40000DDD9F /* TestMarshmallow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestMarshmallow.xcdatamodel; sourceTree = "<group>"; };
 		0EE4E6F82A09DA41000DDD9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EE4E6FB2A09DA41000DDD9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		0EE4E70C2A09DA41000DDD9F /* TestMarshmallowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMarshmallowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE4E7102A09DA41000DDD9F /* TestMarshmallowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMarshmallowUITests.swift; sourceTree = "<group>"; };
 		0EE4E7122A09DA41000DDD9F /* TestMarshmallowUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMarshmallowUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0EE4E7212A0A1ED6000DDD9F /* BatteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +103,8 @@
 			children = (
 				0EE4E6EC2A09DA40000DDD9F /* AppDelegate.swift */,
 				0EE4E6EE2A09DA40000DDD9F /* SceneDelegate.swift */,
-				0EE4E6F02A09DA40000DDD9F /* ViewController.swift */,
+				0EE4E7202A0A1E9B000DDD9F /* Battery */,
+				0EE4E71F2A0A1E90000DDD9F /* WiFi */,
 				0EE4E6F82A09DA41000DDD9F /* Assets.xcassets */,
 				0EE4E6FA2A09DA41000DDD9F /* LaunchScreen.storyboard */,
 				0EE4E6FD2A09DA41000DDD9F /* Info.plist */,
@@ -125,6 +128,22 @@
 				0EE4E7122A09DA41000DDD9F /* TestMarshmallowUITestsLaunchTests.swift */,
 			);
 			path = TestMarshmallowUITests;
+			sourceTree = "<group>";
+		};
+		0EE4E71F2A0A1E90000DDD9F /* WiFi */ = {
+			isa = PBXGroup;
+			children = (
+				0EE4E6F02A09DA40000DDD9F /* WiFiViewController.swift */,
+			);
+			path = WiFi;
+			sourceTree = "<group>";
+		};
+		0EE4E7202A0A1E9B000DDD9F /* Battery */ = {
+			isa = PBXGroup;
+			children = (
+				0EE4E7212A0A1ED6000DDD9F /* BatteryViewController.swift */,
+			);
+			path = Battery;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +276,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EE4E6F12A09DA40000DDD9F /* ViewController.swift in Sources */,
+				0EE4E7222A0A1ED6000DDD9F /* BatteryViewController.swift in Sources */,
+				0EE4E6F12A09DA40000DDD9F /* WiFiViewController.swift in Sources */,
 				0EE4E6ED2A09DA40000DDD9F /* AppDelegate.swift in Sources */,
 				0EE4E6EF2A09DA40000DDD9F /* SceneDelegate.swift in Sources */,
 				0EE4E6F72A09DA40000DDD9F /* TestMarshmallow.xcdatamodeld in Sources */,

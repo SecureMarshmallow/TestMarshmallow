@@ -11,7 +11,7 @@ import NetworkExtension
 import CoreTelephony
 import Network
 
-class ViewController: UIViewController {
+class WiFiViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
