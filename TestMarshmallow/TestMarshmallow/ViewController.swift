@@ -9,7 +9,7 @@ import UIKit
 import SystemConfiguration.CaptiveNetwork
 import NetworkExtension
 import CoreTelephony
-
+import Network
 
 class ViewController: UIViewController {
 
@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         //현재 연결된 Wi-Fi 네트워크의 MAC 주소
         print("BSSID: \(wifiInfo.bssid ?? "Unknown BSSID")")
         
+        //VPN 연결관리
         let vpnManager = NEVPNManager.shared()
         if let protocolConfiguration = vpnManager.protocolConfiguration, let serverAddress = protocolConfiguration.serverAddress {
             print("주소로 VPN 서버에 연결됨: \(serverAddress)")
@@ -33,6 +34,7 @@ class ViewController: UIViewController {
             print("현재 설정된 VPN 연결이 없습니다.")
         }
         
+        //통신사 이름
         let cellularInfo = getCellularInfo()
         if let carrierName = cellularInfo.carrierName {
             print("통신사 이름: \(carrierName)")
@@ -40,13 +42,40 @@ class ViewController: UIViewController {
             print("이동통신사 이름을 검색할 수 없습니다..")
         }
 
+        
+        //현재 셀룰러 기술
         if let technology = cellularInfo.technology {
             print("현재 셀룰러 기술: \(technology)")
         } else {
             print("셀룰러 기술을 검색할 수 없습니다.")
         }
         
-        view.backgroundColor = .red
+        
+        // 모바일 데이터 사용관리
+        let cellularData = CTCellularData()
+        cellularData.cellularDataRestrictionDidUpdateNotifier = { (state:CTCellularDataRestrictedState) -> Void in
+            switch state {
+            case .restricted:
+                print("모바일 데이터 사용 제한 상태")
+            case .notRestricted:
+                print("모바일 데이터 사용 가능 상태")
+            case .restrictedStateUnknown:
+                print("모바일 데이터 제한 상태를 확인할 수 없음")
+            @unknown default:
+                fatalError()
+            }
+        }
+        
+        // 네트워크 경로
+        let monitor = NWPathMonitor()
+        monitor.pathUpdateHandler = { (path) in
+            print("네트워크 경로: \(path.debugDescription)")
+        }
+
+        let queue = DispatchQueue(label: "network-monitor")
+        monitor.start(queue: queue)
+        
+        self.view.backgroundColor = .red
     }
     
     func getCurrentWiFiInfo() -> (ssid: String?, bssid: String?) {
@@ -71,6 +100,5 @@ class ViewController: UIViewController {
         }
         return (nil, nil)
     }
-    
 }
 
