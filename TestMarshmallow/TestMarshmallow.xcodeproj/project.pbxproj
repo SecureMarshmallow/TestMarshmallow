@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0ED9415D2A0B3293008794A4 /* OSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9415C2A0B3293008794A4 /* OSViewController.swift */; };
 		0ED941602A0B36FC008794A4 /* ScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9415F2A0B36FC008794A4 /* ScreenViewController.swift */; };
+		0ED941632A0B3CCC008794A4 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED941622A0B3CCC008794A4 /* FileViewController.swift */; };
 		0EE4E6ED2A09DA40000DDD9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4E6EC2A09DA40000DDD9F /* AppDelegate.swift */; };
 		0EE4E6EF2A09DA40000DDD9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4E6EE2A09DA40000DDD9F /* SceneDelegate.swift */; };
 		0EE4E6F12A09DA40000DDD9F /* WiFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4E6F02A09DA40000DDD9F /* WiFiViewController.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		0ED9415C2A0B3293008794A4 /* OSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSViewController.swift; sourceTree = "<group>"; };
 		0ED9415F2A0B36FC008794A4 /* ScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenViewController.swift; sourceTree = "<group>"; };
+		0ED941622A0B3CCC008794A4 /* FileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
 		0EE4E6E92A09DA40000DDD9F /* TestMarshmallow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMarshmallow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE4E6EC2A09DA40000DDD9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EE4E6EE2A09DA40000DDD9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		0ED941612A0B3CC1008794A4 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				0ED941622A0B3CCC008794A4 /* FileViewController.swift */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
 		0EE4E6E02A09DA40000DDD9F = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,7 @@
 			children = (
 				0EE4E6EC2A09DA40000DDD9F /* AppDelegate.swift */,
 				0EE4E6EE2A09DA40000DDD9F /* SceneDelegate.swift */,
+				0ED941612A0B3CC1008794A4 /* File */,
 				0ED9415E2A0B36EF008794A4 /* Screen */,
 				0ED9415B2A0B328B008794A4 /* OS */,
 				0EE4E7202A0A1E9B000DDD9F /* Battery */,
@@ -300,6 +311,7 @@
 			files = (
 				0ED941602A0B36FC008794A4 /* ScreenViewController.swift in Sources */,
 				0EE4E7222A0A1ED6000DDD9F /* BatteryViewController.swift in Sources */,
+				0ED941632A0B3CCC008794A4 /* FileViewController.swift in Sources */,
 				0EE4E6F12A09DA40000DDD9F /* WiFiViewController.swift in Sources */,
 				0ED9415D2A0B3293008794A4 /* OSViewController.swift in Sources */,
 				0EE4E6ED2A09DA40000DDD9F /* AppDelegate.swift in Sources */,

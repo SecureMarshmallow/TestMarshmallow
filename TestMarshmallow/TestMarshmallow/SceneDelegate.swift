@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window = UIWindow(frame: UIScreen.main.bounds)
             window?.windowScene = windowScene
                 
-        self.window?.rootViewController = ScreenViewController()
+        self.window?.rootViewController = FileViewController()
         self.window?.makeKeyAndVisible()
     }
 
