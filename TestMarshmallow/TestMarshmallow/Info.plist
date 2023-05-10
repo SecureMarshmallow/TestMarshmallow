@@ -32,5 +32,7 @@
         <string>remote-notification</string>
         <string>vpn</string>
     </array>
+    <key>NSCameraUsageDescription</key>
+    <string>This app needs access to your display brightness to adjust the screen brightness within the app.</string>
 </dict>
 </plist>

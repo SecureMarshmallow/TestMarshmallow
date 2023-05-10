@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ED9415D2A0B3293008794A4 /* OSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9415C2A0B3293008794A4 /* OSViewController.swift */; };
+		0ED941602A0B36FC008794A4 /* ScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9415F2A0B36FC008794A4 /* ScreenViewController.swift */; };
 		0EE4E6ED2A09DA40000DDD9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4E6EC2A09DA40000DDD9F /* AppDelegate.swift */; };
 		0EE4E6EF2A09DA40000DDD9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4E6EE2A09DA40000DDD9F /* SceneDelegate.swift */; };
 		0EE4E6F12A09DA40000DDD9F /* WiFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4E6F02A09DA40000DDD9F /* WiFiViewController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0ED9415C2A0B3293008794A4 /* OSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSViewController.swift; sourceTree = "<group>"; };
+		0ED9415F2A0B36FC008794A4 /* ScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenViewController.swift; sourceTree = "<group>"; };
 		0EE4E6E92A09DA40000DDD9F /* TestMarshmallow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMarshmallow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE4E6EC2A09DA40000DDD9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EE4E6EE2A09DA40000DDD9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ED9415B2A0B328B008794A4 /* OS */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9415C2A0B3293008794A4 /* OSViewController.swift */,
+			);
+			path = OS;
+			sourceTree = "<group>";
+		};
+		0ED9415E2A0B36EF008794A4 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9415F2A0B36FC008794A4 /* ScreenViewController.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		0EE4E6E02A09DA40000DDD9F = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +123,8 @@
 			children = (
 				0EE4E6EC2A09DA40000DDD9F /* AppDelegate.swift */,
 				0EE4E6EE2A09DA40000DDD9F /* SceneDelegate.swift */,
+				0ED9415E2A0B36EF008794A4 /* Screen */,
+				0ED9415B2A0B328B008794A4 /* OS */,
 				0EE4E7202A0A1E9B000DDD9F /* Battery */,
 				0EE4E71F2A0A1E90000DDD9F /* WiFi */,
 				0EE4E6F82A09DA41000DDD9F /* Assets.xcassets */,
@@ -276,8 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED941602A0B36FC008794A4 /* ScreenViewController.swift in Sources */,
 				0EE4E7222A0A1ED6000DDD9F /* BatteryViewController.swift in Sources */,
 				0EE4E6F12A09DA40000DDD9F /* WiFiViewController.swift in Sources */,
+				0ED9415D2A0B3293008794A4 /* OSViewController.swift in Sources */,
 				0EE4E6ED2A09DA40000DDD9F /* AppDelegate.swift in Sources */,
 				0EE4E6EF2A09DA40000DDD9F /* SceneDelegate.swift in Sources */,
 				0EE4E6F72A09DA40000DDD9F /* TestMarshmallow.xcdatamodeld in Sources */,
