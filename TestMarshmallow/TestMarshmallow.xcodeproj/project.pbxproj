@@ -10,6 +10,11 @@
 		0ED9415D2A0B3293008794A4 /* OSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9415C2A0B3293008794A4 /* OSViewController.swift */; };
 		0ED941602A0B36FC008794A4 /* ScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9415F2A0B36FC008794A4 /* ScreenViewController.swift */; };
 		0ED941632A0B3CCC008794A4 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED941622A0B3CCC008794A4 /* FileViewController.swift */; };
+		0ED941662A0B5966008794A4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED941652A0B5966008794A4 /* SnapKit */; };
+		0ED941692A0B5972008794A4 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED941682A0B5972008794A4 /* Then */; };
+		0ED941712A0B6154008794A4 /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED941702A0B6154008794A4 /* FamilyControls.framework */; };
+		0ED941732A0B615E008794A4 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED941722A0B615E008794A4 /* DeviceActivity.framework */; };
+		0ED941802A0B755B008794A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9417F2A0B755B008794A4 /* ViewController.swift */; };
 		0EE4E6ED2A09DA40000DDD9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4E6EC2A09DA40000DDD9F /* AppDelegate.swift */; };
 		0EE4E6EF2A09DA40000DDD9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4E6EE2A09DA40000DDD9F /* SceneDelegate.swift */; };
 		0EE4E6F12A09DA40000DDD9F /* WiFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4E6F02A09DA40000DDD9F /* WiFiViewController.swift */; };
@@ -43,6 +48,9 @@
 		0ED9415C2A0B3293008794A4 /* OSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSViewController.swift; sourceTree = "<group>"; };
 		0ED9415F2A0B36FC008794A4 /* ScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenViewController.swift; sourceTree = "<group>"; };
 		0ED941622A0B3CCC008794A4 /* FileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
+		0ED941702A0B6154008794A4 /* FamilyControls.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FamilyControls.framework; path = System/Library/Frameworks/FamilyControls.framework; sourceTree = SDKROOT; };
+		0ED941722A0B615E008794A4 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
+		0ED9417F2A0B755B008794A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0EE4E6E92A09DA40000DDD9F /* TestMarshmallow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMarshmallow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE4E6EC2A09DA40000DDD9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EE4E6EE2A09DA40000DDD9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +72,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED941732A0B615E008794A4 /* DeviceActivity.framework in Frameworks */,
+				0ED941712A0B6154008794A4 /* FamilyControls.framework in Frameworks */,
+				0ED941662A0B5966008794A4 /* SnapKit in Frameworks */,
+				0ED941692A0B5972008794A4 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +120,22 @@
 			path = File;
 			sourceTree = "<group>";
 		};
+		0ED9416F2A0B6154008794A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0ED941722A0B615E008794A4 /* DeviceActivity.framework */,
+				0ED941702A0B6154008794A4 /* FamilyControls.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0ED9417C2A0B6FFC008794A4 /* ScreenTime */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ScreenTime;
+			sourceTree = "<group>";
+		};
 		0EE4E6E02A09DA40000DDD9F = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +143,7 @@
 				0EE4E7052A09DA41000DDD9F /* TestMarshmallowTests */,
 				0EE4E70F2A09DA41000DDD9F /* TestMarshmallowUITests */,
 				0EE4E6EA2A09DA40000DDD9F /* Products */,
+				0ED9416F2A0B6154008794A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +162,8 @@
 			children = (
 				0EE4E6EC2A09DA40000DDD9F /* AppDelegate.swift */,
 				0EE4E6EE2A09DA40000DDD9F /* SceneDelegate.swift */,
+				0ED9417F2A0B755B008794A4 /* ViewController.swift */,
+				0ED9417C2A0B6FFC008794A4 /* ScreenTime */,
 				0ED941612A0B3CC1008794A4 /* File */,
 				0ED9415E2A0B36EF008794A4 /* Screen */,
 				0ED9415B2A0B328B008794A4 /* OS */,
@@ -195,6 +226,10 @@
 			dependencies = (
 			);
 			name = TestMarshmallow;
+			packageProductDependencies = (
+				0ED941652A0B5966008794A4 /* SnapKit */,
+				0ED941682A0B5972008794A4 /* Then */,
+			);
 			productName = TestMarshmallow;
 			productReference = 0EE4E6E92A09DA40000DDD9F /* TestMarshmallow.app */;
 			productType = "com.apple.product-type.application";
@@ -267,6 +302,10 @@
 				Base,
 			);
 			mainGroup = 0EE4E6E02A09DA40000DDD9F;
+			packageReferences = (
+				0ED941642A0B5965008794A4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				0ED941672A0B5972008794A4 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = 0EE4E6EA2A09DA40000DDD9F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -312,6 +351,7 @@
 				0ED941602A0B36FC008794A4 /* ScreenViewController.swift in Sources */,
 				0EE4E7222A0A1ED6000DDD9F /* BatteryViewController.swift in Sources */,
 				0ED941632A0B3CCC008794A4 /* FileViewController.swift in Sources */,
+				0ED941802A0B755B008794A4 /* ViewController.swift in Sources */,
 				0EE4E6F12A09DA40000DDD9F /* WiFiViewController.swift in Sources */,
 				0ED9415D2A0B3293008794A4 /* OSViewController.swift in Sources */,
 				0EE4E6ED2A09DA40000DDD9F /* AppDelegate.swift in Sources */,
@@ -652,6 +692,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0ED941642A0B5965008794A4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		0ED941672A0B5972008794A4 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0ED941652A0B5966008794A4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0ED941642A0B5965008794A4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		0ED941682A0B5972008794A4 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0ED941672A0B5972008794A4 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		0EE4E6F52A09DA40000DDD9F /* TestMarshmallow.xcdatamodeld */ = {

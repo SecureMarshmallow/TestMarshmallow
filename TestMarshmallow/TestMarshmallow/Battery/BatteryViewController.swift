@@ -15,7 +15,7 @@ class BatteryViewController: UIViewController {
         
         
         let isLowPowerMode = ProcessInfo.processInfo.isLowPowerModeEnabled
-        print("Low power mode enabled: \(isLowPowerMode)")
+        print("저전력 모드 활성화됨: \(isLowPowerMode)")
         
         // 배터리 정보 가져오기
         let batteryLevel = UIDevice.current.batteryLevel

@@ -34,5 +34,7 @@
     </array>
     <key>NSCameraUsageDescription</key>
     <string>This app needs access to your display brightness to adjust the screen brightness within the app.</string>
+    <key>NSAppleMusicUsageDescription</key>
+    <string>Allow access to Screen Time data for usage statistics and reports.</string>
 </dict>
 </plist>
