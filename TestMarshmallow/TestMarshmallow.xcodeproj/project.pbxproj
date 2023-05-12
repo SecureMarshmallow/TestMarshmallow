@@ -129,13 +129,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0ED9417C2A0B6FFC008794A4 /* ScreenTime */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ScreenTime;
-			sourceTree = "<group>";
-		};
 		0EE4E6E02A09DA40000DDD9F = {
 			isa = PBXGroup;
 			children = (
@@ -163,7 +156,6 @@
 				0EE4E6EC2A09DA40000DDD9F /* AppDelegate.swift */,
 				0EE4E6EE2A09DA40000DDD9F /* SceneDelegate.swift */,
 				0ED9417F2A0B755B008794A4 /* ViewController.swift */,
-				0ED9417C2A0B6FFC008794A4 /* ScreenTime */,
 				0ED941612A0B3CC1008794A4 /* File */,
 				0ED9415E2A0B36EF008794A4 /* Screen */,
 				0ED9415B2A0B328B008794A4 /* OS */,
