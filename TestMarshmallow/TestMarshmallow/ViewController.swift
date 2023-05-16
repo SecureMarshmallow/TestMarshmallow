@@ -5,11 +5,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     var collectionView: UICollectionView!
     var items: [[Int]] = [
-        [2],
-        [1,1,1,1,1,1,1,1],
-        [3],
-        [4, 4],
-        [5],
+        [2, 3, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 5]
     ]
     
     let cellIdentifier = "cell"
@@ -17,12 +13,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         let layout = UICollectionViewFlowLayout()
-//        layout.minimumLineSpacing = 10
-//        layout.minimumInteritemSpacing = 10
-//        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 10
+        layout.sectionInset = UIEdgeInsets(top: 24, left: 20, bottom: 24, right: 20)
+
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -36,7 +32,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongGesture(_:)))
         collectionView.addGestureRecognizer(longPressGesture)
     }
-    
     
     @objc func handleLongGesture(_ gesture: UILongPressGestureRecognizer) {
         switch gesture.state {
@@ -130,11 +125,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return cellSize
     }
 
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        return UIEdgeInsets(top: 24, left: 20, bottom: 24, right: 20)
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 20
     }
@@ -144,7 +138,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.bounds.width, height: 40)
+        return CGSize(width: collectionView.bounds.width, height: 60)
     }
     
 }
@@ -170,12 +164,17 @@ extension ViewController {
         let item = items[sourceIndexPath.section].remove(at: sourceIndexPath.item)
         items[destinationIndexPath.section].insert(item, at: destinationIndexPath.item)
         
-        // 이동한 셀의 순서가 변경되었으므로 해당 섹션 전체를 업데이트
-        collectionView.reloadSections([sourceIndexPath.section, destinationIndexPath.section])
+        if sourceIndexPath.section == destinationIndexPath.section {
+
+            collectionView.reloadSections([sourceIndexPath.section])
+        } else {
+
+            collectionView.reloadSections([sourceIndexPath.section, destinationIndexPath.section])
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, targetIndexPathForMoveFromItemAt originalIndexPath: IndexPath, toProposedIndexPath proposedIndexPath: IndexPath) -> IndexPath {
-        // 가운데 맞출려고 했었던 코드
+
         let adjustedIndexPath = IndexPath(item: (collectionView.numberOfItems(inSection: proposedIndexPath.section) / 2), section: proposedIndexPath.section)
         return adjustedIndexPath
     }
