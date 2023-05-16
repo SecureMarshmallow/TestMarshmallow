@@ -37,6 +37,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collectionView.addGestureRecognizer(longPressGesture)
     }
     
+    
     @objc func handleLongGesture(_ gesture: UILongPressGestureRecognizer) {
         switch gesture.state {
         case .began:
@@ -44,32 +45,23 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 break
             }
             collectionView.beginInteractiveMovementForItem(at: selectedIndexPath)
-            
+
             let cell = collectionView.cellForItem(at: selectedIndexPath)!
             
             movingCellSnapshot = cell.snapshotView(afterScreenUpdates: false)
             movingCellSnapshot?.center = cell.center
             collectionView.addSubview(movingCellSnapshot!)
-            
-            collectionView.visibleCells.forEach { cell in
-                UIView.animate(withDuration: 0.1, delay: 0, options: [.autoreverse, .repeat], animations: {
-                    cell.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
-                }, completion: nil)
-            }
-            
             cell.isHidden = true
         case .changed:
             collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: collectionView))
             movingCellSnapshot?.center = gesture.location(in: collectionView)
-        case .ended, .cancelled:
+        case .ended:
             collectionView.endInteractiveMovement()
             if let snapshot = movingCellSnapshot {
                 snapshot.removeFromSuperview()
             }
             if let selectedIndexPath = collectionView.indexPathsForSelectedItems?.first {
-                let cell = collectionView.cellForItem(at: selectedIndexPath)
-                cell?.isHidden = false
-                stopCellShakeAnimation()
+                collectionView.cellForItem(at: selectedIndexPath)?.isHidden = false
             }
         default:
             collectionView.cancelInteractiveMovement()
@@ -77,20 +69,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 snapshot.removeFromSuperview()
             }
             if let selectedIndexPath = collectionView.indexPathsForSelectedItems?.first {
-                let cell = collectionView.cellForItem(at: selectedIndexPath)
-                cell?.isHidden = false
-                stopCellShakeAnimation()
+                collectionView.cellForItem(at: selectedIndexPath)?.isHidden = false
             }
         }
     }
-
-    private func stopCellShakeAnimation() {
-        collectionView.visibleCells.forEach { cell in
-            cell.layer.removeAllAnimations()
-            cell.transform = .identity
-        }
-    }
-
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return items.count
@@ -174,21 +156,6 @@ extension ViewController {
 
         return true
     }
-
-    
-    //뭔가 잘했지만 망한 코드 20 번째
-//    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-//        let sourceSection = sourceIndexPath.section
-//        let sourceItem = sourceIndexPath.item
-//        let destinationSection = destinationIndexPath.section
-//        let destinationItem = destinationIndexPath.item
-//
-//        let item = items[sourceSection].remove(at: sourceItem)
-//
-//        items[destinationSection].insert(item, at: destinationItem)
-//
-//        collectionView.reloadData()
-//    }
     
     func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
 
