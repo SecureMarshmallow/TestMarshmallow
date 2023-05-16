@@ -19,9 +19,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         super.viewDidLoad()
         
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 10
-        layout.minimumInteritemSpacing = 10
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+//        layout.minimumLineSpacing = 10
+//        layout.minimumInteritemSpacing = 10
+//        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.dataSource = self
@@ -110,28 +110,37 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         
         let item = items[indexPath.section][indexPath.item]
+        var cellSize = CGSize.zero
+        
         switch item {
         case 1:
-            return CGSize(width: 80, height: 80)
+            cellSize = CGSize(width: 80 - 20, height: 80 - 20)
         case 2:
-            return CGSize(width: 370, height: 230)
+            cellSize = CGSize(width: 370 - 20, height: 230 - 20)
         case 3:
-            return CGSize(width: 370, height: 260)
+            cellSize = CGSize(width: 370 - 20, height: 260 - 20)
         case 4:
-            return CGSize(width: 150, height: 150)
+            cellSize = CGSize(width: 150 - 20, height: 150 - 20)
         case 5:
-            return CGSize(width: 370, height: 370)
+            cellSize = CGSize(width: 370 - 20, height: 370 - 20)
         default:
-            return .zero
+            break
         }
+        
+        return cellSize
     }
+
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .zero
+        return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 20
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -158,14 +167,13 @@ extension ViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-
         let item = items[sourceIndexPath.section].remove(at: sourceIndexPath.item)
-        
         items[destinationIndexPath.section].insert(item, at: destinationIndexPath.item)
         
-        collectionView.reloadData()
+        // 이동한 셀의 순서가 변경되었으므로 해당 섹션 전체를 업데이트
+        collectionView.reloadSections([sourceIndexPath.section, destinationIndexPath.section])
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, targetIndexPathForMoveFromItemAt originalIndexPath: IndexPath, toProposedIndexPath proposedIndexPath: IndexPath) -> IndexPath {
         // 가운데 맞출려고 했었던 코드
         let adjustedIndexPath = IndexPath(item: (collectionView.numberOfItems(inSection: proposedIndexPath.section) / 2), section: proposedIndexPath.section)
