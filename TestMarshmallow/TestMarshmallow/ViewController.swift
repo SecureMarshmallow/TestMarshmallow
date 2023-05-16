@@ -1,11 +1,20 @@
 import UIKit
+import Then
 import SnapKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    private lazy var navLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = UIColor.black
+        label.text = "SecureMarshmallow"
+        label.font = .systemFont(ofSize: 24.0, weight: .bold)
+        return label
+    }()
+    
     var collectionView: UICollectionView!
     var items: [[Int]] = [
-        [2, 3, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 5]
+        [3, 1, 1, 1, 1, 2, 4, 4]
     ]
     
     let cellIdentifier = "cell"
@@ -31,6 +40,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongGesture(_:)))
         collectionView.addGestureRecognizer(longPressGesture)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        configureUI()
+    }
+    
+    func configureUI() {
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: navLabel)
+        self.navigationItem.leftItemsSupplementBackButton = true
     }
     
     @objc func handleLongGesture(_ gesture: UILongPressGestureRecognizer) {
@@ -124,7 +144,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         return cellSize
     }
-
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 24, left: 20, bottom: 24, right: 20)
     }
