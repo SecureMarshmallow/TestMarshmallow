@@ -38,5 +38,7 @@
     <string>Allow access to Screen Time data for usage statistics and reports.</string>
     <key>NSUserActivityUsageDescription</key>
     <string>스크린 타임 정보를 읽으려면 권한을 부여해주세요.</string>
+    <key>NSFaceIDUsageDescription</key>
+    <string>This app uses Face ID for authentication purposes.</string>
 </dict>
 </plist>

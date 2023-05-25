@@ -13,6 +13,9 @@
 		0E85AA012A1B4C42000676C2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA002A1B4C42000676C2 /* SettingsViewController.swift */; };
 		0E85AA032A1B4D2F000676C2 /* SettingsItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA022A1B4D2F000676C2 /* SettingsItemType.swift */; };
 		0E85AA052A1B4D61000676C2 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA042A1B4D61000676C2 /* SettingsCell.swift */; };
+		0E85AA632A1F2301000676C2 /* LockScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA622A1F2301000676C2 /* LockScreenViewController.swift */; };
+		0E85AA672A1F7192000676C2 /* CustomCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA662A1F7192000676C2 /* CustomCollectionViewController.swift */; };
+		0E85AA692A1F73E5000676C2 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA682A1F73E5000676C2 /* ViewController2.swift */; };
 		0ED9415D2A0B3293008794A4 /* OSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9415C2A0B3293008794A4 /* OSViewController.swift */; };
 		0ED941602A0B36FC008794A4 /* ScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9415F2A0B36FC008794A4 /* ScreenViewController.swift */; };
 		0ED941632A0B3CCC008794A4 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED941622A0B3CCC008794A4 /* FileViewController.swift */; };
@@ -57,6 +60,9 @@
 		0E85AA002A1B4C42000676C2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0E85AA022A1B4D2F000676C2 /* SettingsItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemType.swift; sourceTree = "<group>"; };
 		0E85AA042A1B4D61000676C2 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		0E85AA622A1F2301000676C2 /* LockScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenViewController.swift; sourceTree = "<group>"; };
+		0E85AA662A1F7192000676C2 /* CustomCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewController.swift; sourceTree = "<group>"; };
+		0E85AA682A1F73E5000676C2 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		0ED9415C2A0B3293008794A4 /* OSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSViewController.swift; sourceTree = "<group>"; };
 		0ED9415F2A0B36FC008794A4 /* ScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenViewController.swift; sourceTree = "<group>"; };
 		0ED941622A0B3CCC008794A4 /* FileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +188,8 @@
 				0EE4E6EC2A09DA40000DDD9F /* AppDelegate.swift */,
 				0EE4E6EE2A09DA40000DDD9F /* SceneDelegate.swift */,
 				0ED9417F2A0B755B008794A4 /* ViewController.swift */,
+				0E85AA682A1F73E5000676C2 /* ViewController2.swift */,
+				0E85AA662A1F7192000676C2 /* CustomCollectionViewController.swift */,
 				0ED941612A0B3CC1008794A4 /* File */,
 				0ED9415E2A0B36EF008794A4 /* Screen */,
 				0ED9415B2A0B328B008794A4 /* OS */,
@@ -191,6 +199,7 @@
 				0EE4E6FA2A09DA41000DDD9F /* LaunchScreen.storyboard */,
 				0EE4E6FD2A09DA41000DDD9F /* Info.plist */,
 				0EE4E6F52A09DA40000DDD9F /* TestMarshmallow.xcdatamodeld */,
+				0E85AA622A1F2301000676C2 /* LockScreenViewController.swift */,
 			);
 			path = TestMarshmallow;
 			sourceTree = "<group>";
@@ -367,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ED941602A0B36FC008794A4 /* ScreenViewController.swift in Sources */,
+				0E85AA632A1F2301000676C2 /* LockScreenViewController.swift in Sources */,
 				0E85A9FD2A1B4B7C000676C2 /* BaseVC.swift in Sources */,
 				0EE4E7222A0A1ED6000DDD9F /* BatteryViewController.swift in Sources */,
 				0ED941632A0B3CCC008794A4 /* FileViewController.swift in Sources */,
@@ -376,10 +386,12 @@
 				0E85AA032A1B4D2F000676C2 /* SettingsItemType.swift in Sources */,
 				0ED9415D2A0B3293008794A4 /* OSViewController.swift in Sources */,
 				0E85A9FF2A1B4BD9000676C2 /* BaseSC.swift in Sources */,
+				0E85AA692A1F73E5000676C2 /* ViewController2.swift in Sources */,
 				0EE4E6ED2A09DA40000DDD9F /* AppDelegate.swift in Sources */,
 				0E85AA012A1B4C42000676C2 /* SettingsViewController.swift in Sources */,
 				0EE4E6EF2A09DA40000DDD9F /* SceneDelegate.swift in Sources */,
 				0EE4E6F72A09DA40000DDD9F /* TestMarshmallow.xcdatamodeld in Sources */,
+				0E85AA672A1F7192000676C2 /* CustomCollectionViewController.swift in Sources */,
 				0E85AA052A1B4D61000676C2 /* SettingsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
