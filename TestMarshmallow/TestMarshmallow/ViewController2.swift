@@ -4,13 +4,12 @@ class ViewController2: UIViewController, UICollectionViewDataSource, UICollectio
     var collectionView1: UICollectionView!
     var collectionView2: UICollectionView!
     
-    var collectionView1Data = ["Cell 1", "Cell 2", "Cell 3"] // CollectionView1의 데이터
-    var collectionView2Data = ["Cell A", "Cell B", "Cell C"] // CollectionView2의 데이터
+    var collectionView1Data = ["Cell 1", "Cell 2", "Cell 3"]
+    var collectionView2Data = ["Cell A", "Cell B", "Cell C"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // CollectionView1 생성
         let collectionView1FlowLayout = UICollectionViewFlowLayout()
         collectionView1FlowLayout.itemSize = CGSize(width: 100, height: 50)
         collectionView1FlowLayout.scrollDirection = .vertical
@@ -24,7 +23,6 @@ class ViewController2: UIViewController, UICollectionViewDataSource, UICollectio
         collectionView1.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CollectionView1Cell")
         view.addSubview(collectionView1)
         
-        // CollectionView2 생성
         let collectionView2FlowLayout = UICollectionViewFlowLayout()
         collectionView2FlowLayout.itemSize = CGSize(width: 100, height: 50)
         collectionView2FlowLayout.scrollDirection = .vertical
