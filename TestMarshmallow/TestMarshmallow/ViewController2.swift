@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController2: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDragDelegate, UICollectionViewDropDelegate {
+class ViewController2: UIViewController {
     var collectionView1: UICollectionView!
     var collectionView2: UICollectionView!
     
@@ -37,8 +37,13 @@ class ViewController2: UIViewController, UICollectionViewDataSource, UICollectio
         view.addSubview(collectionView2)
     }
     
-    // MARK: - UICollectionViewDataSource
+}
+
+extension ViewController2: UICollectionViewDropDelegate {
     
+}
+
+extension ViewController2: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == collectionView1 {
             return collectionView1Data.count
@@ -60,14 +65,22 @@ class ViewController2: UIViewController, UICollectionViewDataSource, UICollectio
         }
         return UICollectionViewCell()
     }
-    
-    // MARK: - UICollectionViewDelegate
-    
+}
+
+extension ViewController2: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // Handle cell selection if needed
+        
+        if collectionView == collectionView1 {
+            print("collectionView1")
+        }
+        
+        if collectionView == collectionView2 {
+            print("collectionView2")
+        }
     }
+}
     
-    // MARK: - UICollectionViewDragDelegate
+extension ViewController2: UICollectionViewDragDelegate {
     
     func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
         if collectionView == collectionView1 {
@@ -85,8 +98,6 @@ class ViewController2: UIViewController, UICollectionViewDataSource, UICollectio
         }
         return []
     }
-    
-    // MARK: - UICollectionViewDropDelegate
     
     func collectionView(_ collectionView: UICollectionView, canHandle session: UIDropSession) -> Bool {
         return session.canLoadObjects(ofClass: NSString.self)
